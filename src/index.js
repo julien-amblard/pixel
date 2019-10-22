@@ -1,35 +1,19 @@
 var Pixel = function( _o, _options ){
-
-	this.settings 		= {
-
-		w 		: 	5,
-		
-		trace 	: 0.1, 
-		
-		addClass : true,
-		
-		aClass  : [
-
-					'_top',
-					'_right',
-					'_bottom',
-					'_left'
-		],
-
-		wave : {
-
-			w : 10,
-			speed : 5
-
+	this.settings = {
+		w: 5,
+		trace: 0.1, 
+		addClass: true,
+		aClass: [ '_top', '_right', '_bottom', '_left' ],
+		wave: {
+			w: 10,
+			speed: 5
 		},
+		preload: false
+	}
 
-		preload : false
-	};
-
-
-	this.img 			= {};
-	this.canvas;
-	this.ctx;
+	this.img = {}
+	this.canvas
+	this.ctx
 	this.aPixels 		= [];
 	this.iCell 			= 0;
 	this.iRow 			= 0;
@@ -105,7 +89,7 @@ var Pixel = function( _o, _options ){
 		this.iRow = Math.floor( this.img.h / this.settings.w );
 		this.aPixels = [];
 
-	    for (var r = 0; r <= this.iRow; r++) {
+		for (var r = 0; r <= this.iRow; r++) {
 
 			this.aPixels[ r ] = [];
 			
@@ -123,36 +107,6 @@ var Pixel = function( _o, _options ){
 		};
 
 	};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	Pixel.prototype.getColors = function(){
 
@@ -175,46 +129,20 @@ var Pixel = function( _o, _options ){
 		var count = 0;
 
 		while ( (i += this.settings.w * 4) < pixels.length ) {
-	        ++count;
-	        rgb.r += pixels[i];
-	        rgb.g += pixels[i+1];
-	        rgb.b += pixels[i+2];
-	    }
-	    
-	    // ~~ used to floor values
-	    rgb.r = ~~(rgb.r/count);
-	    rgb.g = ~~(rgb.g/count);
-	    rgb.b = ~~(rgb.b/count);
+			++count;
+			rgb.r += pixels[i];
+			rgb.g += pixels[i+1];
+			rgb.b += pixels[i+2];
+		}
+		
+		// ~~ used to floor values
+		rgb.r = ~~(rgb.r/count);
+		rgb.g = ~~(rgb.g/count);
+		rgb.b = ~~(rgb.b/count);
 
 		return rgb; 
 
 	};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	Pixel.prototype.bindEvent = function()
 	{
@@ -289,19 +217,6 @@ var Pixel = function( _o, _options ){
 
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 	Pixel.prototype.updateDir = function()
 	{
 
@@ -336,9 +251,6 @@ var Pixel = function( _o, _options ){
 	}
 
 
-
-
-
 	Pixel.prototype.updateClass = function()
 	{
 
@@ -358,13 +270,6 @@ var Pixel = function( _o, _options ){
 		};
 
 	}
-
-
-
-
-	
-
-
 
 
 	Pixel.prototype.checkWaves = function( x, y )
@@ -388,17 +293,17 @@ var Pixel = function( _o, _options ){
 	{
 
 		var distX = Math.abs(cx - x-this.settings.w/2);
-	    var distY = Math.abs(cy - y-this.settings.w/2);
+		var distY = Math.abs(cy - y-this.settings.w/2);
 
-	    if (distX > (this.settings.w/2 + cr)) { return false; }
-	    if (distY > (this.settings.w/2 + cr)) { return false; }
+		if (distX > (this.settings.w/2 + cr)) { return false; }
+		if (distY > (this.settings.w/2 + cr)) { return false; }
 
-	    if (distX <= (this.settings.w/2)) { return true; } 
-	    if (distY <= (this.settings.w/2)) { return true; }
+		if (distX <= (this.settings.w/2)) { return true; } 
+		if (distY <= (this.settings.w/2)) { return true; }
 
-	    var dx=distX-this.settings.w/2;
-	    var dy=distY-this.settings.w/2;
-	    return (dx*dx+dy*dy<=(cr*cr));
+		var dx=distX-this.settings.w/2;
+		var dy=distY-this.settings.w/2;
+		return (dx*dx+dy*dy<=(cr*cr));
 
 	};
 
@@ -422,24 +327,6 @@ var Pixel = function( _o, _options ){
 
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	Pixel.prototype.update = function()
 	{
 
@@ -453,37 +340,6 @@ var Pixel = function( _o, _options ){
 			this.stop();
 
 	};
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	Pixel.prototype.getAnim = function()
 	{
@@ -602,60 +458,6 @@ var Pixel = function( _o, _options ){
 
 	};
 
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	Pixel.prototype.drawWave = function()
 	{
 
@@ -730,3 +532,6 @@ var Pixel = function( _o, _options ){
 
 };
 
+
+
+export default Pixel

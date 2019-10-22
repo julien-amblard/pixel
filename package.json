@@ -1,0 +1,39 @@
+{
+	"name": "Pixel",
+	"version": "0.0.1",
+	"description": "pixel effect",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "yarn jest --config=./tests/jest.config.js --verbose",
+		"build": "rimraf ./dist && webpack --config webpack.config.js",
+		"dev": "webpack-dev-server --mode development --config webpack.dev.js",
+		"demo": "npm run build && webpack-dev-server --mode production --config webpack.prod.js",
+		"prepublishOnly": "npm run build"
+	},
+	"keywords": [
+		"pixel",
+		"canvas"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Julien-Amblard/pixel.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Julien-Amblard/pixel/issues"
+	},
+	"author": "Julien Amblard <amblard.julien@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"@babel/cli": "^7.6.4",
+		"@babel/core": "^7.6.4",
+		"@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+		"@babel/polyfill": "^7.6.0",
+		"@babel/preset-env": "^7.6.3",
+		"babel-jest": "^24.9.0",
+		"babel-loader": "^8.0.6",
+		"html-webpack-plugin": "^3.2.0",
+		"webpack": "^4.41.2",
+		"webpack-cli": "^3.3.9",
+		"webpack-dev-server": "^3.8.2"
+	}
+}
