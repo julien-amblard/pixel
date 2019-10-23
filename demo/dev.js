@@ -1,11 +1,11 @@
 
-
+import Pixel from "../src/"
 
 var aThumbs = document.querySelectorAll('.w--thumbs-item');
 var aPixel = [];
 
 
-init = function(){
+var init = function(){
 
 	for (var i = 0; i < aThumbs.length; i++) {
 
