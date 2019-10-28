@@ -1,10 +1,14 @@
-import Pixels from "../src/"
+// import Pixels from "../src/"
+import Direction from "../src/direction" 
 const imgs = [...document.querySelectorAll(".item img")]
 imgs.map( o => {
-	new Pixels(o, {
-		onUpdate: () => console.log( "update" ),
-		size: 15
+	new Direction({
+		el: o
 	})
+	// new Pixels(o, {
+	// 	onUpdate: () => console.log( "update" ),
+	// 	size: 15
+	// })
 })
 // trolol.start()
 // import Pixel from "../src/"
