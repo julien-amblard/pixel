@@ -29,6 +29,7 @@ module.exports = {
 		extensions: [".js"]
 	},
 	devServer: {
-		port: 3001
+		port: 3001,
+		open: true
 	}
 }
