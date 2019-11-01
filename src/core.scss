@@ -1,0 +1,30 @@
+html, body {
+	margin: 0;
+	background-color: #0F1119;
+}
+.thumbs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+
+	.item {
+		display: inline-flex;
+		margin: 12px;
+		border-radius: 4px;
+		position: relative;
+		vertical-align: top;
+		z-index: 0;
+		&:hover {
+			z-index: 1;
+		}
+		canvas, img {
+			display: block;
+			overflow: hidden;
+			border-radius: 4px;
+			position: relative;
+			z-index: 1;
+			cursor: pointer;
+		}
+	}
+}
