@@ -1,7 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 const config = {
-	entry : './src/index.js',
+	entry : './src/direction.js',
 	output : {
 		path: path.resolve(__dirname,'dist'),
 		filename: 'pixel.min.js',
@@ -15,6 +15,10 @@ const config = {
 	},
 	module: {
 		rules: [
+			{
+				test: /\.scss$/i,
+				use: ['style-loader', 'css-loader', 'sass-loader'],
+			},
 			{
 			test: /\.(js)$/,
 			exclude: /(node_modules|bower_components)/,

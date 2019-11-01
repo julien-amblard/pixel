@@ -1,8 +1,8 @@
-import "./direction.css"
+import "./direction.scss"
 const DEFAULT_DIR = -1
 class Direction {
 	constructor ( settings ) {
-		this.classes = [ '_top', '_right', '_bottom', '_left' ]
+		this.classes = [ '__top', '__right', '__bottom', '__left' ]
 		this.onUpdate = typeof settings.onUpdate === "function" ? settings.onUpdate : null
 		this.$el = settings.el instanceof HTMLElement ? settings.el : null
 		this.dir = DEFAULT_DIR

@@ -1,4 +1,5 @@
 // import Pixels from "../src/"
+import "../src/core.scss"
 import Direction from "../src/direction" 
 const imgs = [...document.querySelectorAll(".item img")]
 imgs.map( o => {
