@@ -1,3 +1,4 @@
+import "./direction.css"
 const DEFAULT_DIR = -1
 class Direction {
 	constructor ( settings ) {
