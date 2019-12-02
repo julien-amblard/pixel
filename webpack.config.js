@@ -1,6 +1,5 @@
 var path = require('path')
 var webpack = require('webpack')
-
 const config = {
 	entry : './src/direction.js',
 	output : {
