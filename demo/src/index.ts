@@ -1,3 +1,7 @@
-import { foo } from "../../src"
+import { Pixelizer } from "../../src"
+import "./core.scss"
 
-foo()
+const img = document.querySelector("img")
+
+const test = Pixelizer(img, { machin: "truc" })
+test.sayHello()

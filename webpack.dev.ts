@@ -9,7 +9,7 @@ module.exports = {
 	output : {
 		path: path.resolve(__dirname,'demo/dist')
 	},
-	target: "node",
+	target: "web",
 	module: {
 		rules: [
 			{
@@ -35,6 +35,7 @@ module.exports = {
 		extensions: [".js", ".jsx", ".ts", ".tsx"]
 	},
 	devServer: {
+		hot: true,
 		port: 8645,
 		open: true
 	}
