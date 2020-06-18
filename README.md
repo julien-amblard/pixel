@@ -1,27 +1,28 @@
-# package-name
+# pixelizer
 
 [![CircleCI Status](https://circleci.com/gh/Julien-Amblard/package-template.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/Julien-Amblard/package-template)
 [![codecov](https://codecov.io/gh/Julien-Amblard/package-template/branch/master/graph/badge.svg)](https://codecov.io/gh/Julien-Amblard/package-template)
 [![npm](https://img.shields.io/npm/dt/package-template.svg?style=flat-square)](https://www.npmjs.com/package/package-template)
 [![npm](https://img.shields.io/npm/v/package-template.svg?style=flat-square)](https://www.npmjs.com/package/package-template)
 [![npm](https://img.shields.io/npm/l/package-template.svg?style=flat-square)](https://github.com/Julien-Amblard/package-template/blob/master/LICENSE)
-  
+
 > description
 
 ## [Live example](https://codepen.io/Capse/pen/gObOKGo)
 
-- [Install](#install)
-- [Importing](#Importing)
-- [Options](#options)
-  - [Prop](#prop)
-- [Methods](#methods)
-  - [foo()](#foo)
-  
+-   [Install](#install)
+-   [Importing](#Importing)
+-   [Options](#options)
+    -   [Prop](#prop)
+-   [Methods](#methods)
+
+    -   [foo()](#foo)
+
 ## Install <a id="install"></a>
 
 `npm i package-name --save`  
 or  
-`yarn add package-name`  
+`yarn add package-name`
 
 ---
 
@@ -35,13 +36,13 @@ Module()
 
 ---
 
-## Options <a id="options"></a>  
+## Options <a id="options"></a>
 
-### Prop <a id="prop"></a>  
+### Prop <a id="prop"></a>
 
-| Type | Default | required | Description |
-|:----|:----|:----|:----|
-| `HTMLCanvasElement` | `null` | `true` | lorem ipsum |
+| Type                | Default | required | Description |
+| :------------------ | :------ | :------- | :---------- |
+| `HTMLCanvasElement` | `null`  | `true`   | lorem ipsum |
 
 ```js
 import Module from "package-name"
@@ -51,20 +52,22 @@ Module()
 
 ---
 
-## Methods <a id="methods"></a>  
+## Methods <a id="methods"></a>
 
-### .foo() <a id="foo"></a>  
+### .foo() <a id="foo"></a>
 
-| Type | Description |
-|:----|:----|
+| Type       | Description |
+| :--------- | :---------- |
 | `function` | lorem ipsum |
+
 > description
 
 ---
+
 ---
 
-## TODO  
+## TODO
 
-- [ ] Doc
-- [ ] TU
-- [ ] TS
+-   [ ] Doc
+-   [ ] TU
+-   [ ] TS
